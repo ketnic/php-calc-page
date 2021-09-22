@@ -1,0 +1,17 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        @media (prefers-color-scheme: dark) {
+            #favicon-part-1 {
+                fill: #fff;
+            }
+    
+            #favicon-part-2 {
+                fill: #E9E9E9;
+            }
+        }
+    </style>
+    <path id="favicon-part-1" d="M96 0L96 51.9809C96 53.1962 95.4629 54.348 94.5351 55.1222L45.3049 95.529C43.9912 96.6253 42.0059 95.6861 42 93.9655L42 2.04472C41.9959 0.916565 42.901 0 44.0186 0H96Z"
+          fill="#1F2229"/>
+    <path id="favicon-part-2" d="M96 0H44.1212C42.9059 0 41.7541 0.541251 40.9798 1.47614L0.470891 50.6698C-0.625365 51.9936 0.313824 53.9941 2.03443 54H93.9553C95.0834 54.0041 96 53.0921 96 51.966V0Z"
+          fill="#202433"/>
+</svg>

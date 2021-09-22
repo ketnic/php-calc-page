@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+  <link rel="stylesheet" href="style.css">
+
+  <link href="node_modules/air-datepicker/dist/css/datepicker.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="spacer logo-container">
+      <a href="." title="Deposit Calculator">
+        <img src="assets/logo-mini.png" alt="logo" class="logo-icon">
+      </a>
+    </div>
+    <div class="container row">
+      <span class="logo-title">iq dev</span>
+      <span class="logo-subtitle">Deposit Calculator</span>
+    </div>
+    <div class="spacer"></div>
+  </header>
+
+  <div class="container column content light-background">
+    <h1 class="content-title">Депозитный калькулятор</h1>
+    <h5 class="content-text">Калькулятор депозитов позволяет рассчитать ваши доходы после внесения суммы на счет в банке
+      по определенному тарифу.</h5>
+    <form class="form-container" id="input-form" action="calc.php">
+      <div class="inputs-container">
+        <div class="input-box">
+          <div class="input">
+            <p>Дата открытия</p>
+            <input type='text' class="datepicker-here" data-position="right top" id="startDate" name="startDate">
+          </div>
+        </div>
+        <div class="input-box">
+          <div class="input" id="with-select">
+            <p>Срок вклада</p>
+            <input type="number" min="0" id="term" placeholder="Срок вклада" name="term">
+          </div>
+          <select id="termOption">
+            <option>месяц</option>
+            <option>год</option>
+          </select>
+        </div>
+        <div class="input-box">
+          <div class="input">
+            <p>Сумма вклада</p>
+            <input type="number" min="0" id="sum" placeholder="Сумма вклада" name="sum">
+          </div>
+        </div>
+        <div class="input-box">
+          <div class="input">
+            <p>Процентная ставка, % годовых</p>
+            <input type="number" min="0" id="percent" placeholder="Процентная ставка, % годовых" name="percent">
+          </div>
+        </div>
+        <div class="input-box input-box-checkbox">
+          <input type="checkbox" id="checkbox" name="checkbox">
+          <label for="checkbox">Ежемесячное пополнение вклада</label>
+        </div>
+        <div class="input-box" id="sumAdd-container">
+          <div class="input">
+            <p>Сумма пополнения вклада</p>
+            <input type="number" min="0" name="" id="sumAdd" placeholder="Сумма пополнения вклада" name="sumAdd">
+          </div>
+        </div>
+      </div>
+      <input type="submit" value="Рассчитать" id="submit" name="submit">
+    </form>
+    <div class="result" id="result-container">
+      <div class="sum-announce-text">
+         Сумма к выплате
+      </div>
+      <div class="sum-text">
+        <p id="result"></p>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="assets\jquery.js"></script>
+<script src="assets\datepicker.min.js"></script>
+<script src="assets\jquery.validate.js"></script>
+
+<script src="script.js"></script>
+
+</html>
